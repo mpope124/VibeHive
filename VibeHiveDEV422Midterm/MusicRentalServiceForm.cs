@@ -10,17 +10,23 @@ using System.Windows.Forms;
 
 namespace VibeHiveDEV422Midterm
 {
-    public partial class Form1 : Form
+    public partial class MusicRentalServiceForm : Form
     {
-        public Form1()
+        public MusicRentalServiceForm()
         {
             InitializeComponent();
         }
 
-        private void musicRentalServiceButton_Click(object sender, EventArgs e)
+        private void backToHomeButton_Click(object sender, EventArgs e)
         {
-            MusicRentalServiceForm musicRentalServiceForm = new MusicRentalServiceForm();
-            musicRentalServiceForm.Show();
+
+            this.Hide();
+        }
+
+        private void backToHomeButton_Click_1(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
             this.Hide();
         }
     }
