@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+option csharp_namespace = "AlbumServiceApi.Protos";
+
+package AlbumServiceApi;
+service AlbumService{
+	//add a new album to the inventory
+	rpc AddAlbum (AddAlbumRequest) returns (AddAlbumResponse);
+
+	//retrive an album by id
+	rpc GetAlbum (AlbumId) returns (GetAlbumResponse);
+
+	//update an existing album
+	rpc UpdateAlbum (UpdateAlbumRequest) returns (UpdateAlbumResponse);
+
+	//remove or delete existing album by id
+	rpc DeleteAlbum (AlbumId) returns (DeleteAlbumResponse);
+
+	//list all of the albums (remmeber tip to use bidirectional streaming)
+	rpc ListAlbums (ListAlbumsRequest) returns (stream Album);
+
+}
+
+//album messages
+//# = field identifier
+message Album {
+	string id = 1;
+	string title = 2;
+	string artists = 3;
+	string genre = 4;
+	int32 year = 5;
+	//specifically required availability as bool i think
+	bool available = 6;
+}
+
+//album id
+message AlbumId{
+	string id = 1;
+}
+
+//todoL:
+//add album request
+message AddAlbumRequest{
+	Album album = 1;
+}
+
+//add album response
+message AddAlbumResponse{
+	Album album = 1;
+}
+
+//get album response
+message GetAlbumResponse{
+	Album album = 1;
+}
+
+//update album response
+message UpdateAlbumRequest{
+	Album album = 1;
+}
+
+//update album request
+message UpdateAlbumResponse{
+	Album album = 1;
+}
+
+//delete album response
+message DeleteAlbumResponse{
+	Album album = 1;
+}
+
+//list albums requrest
+//no fields input, empty imp
+message ListAlbumsRequest {}
