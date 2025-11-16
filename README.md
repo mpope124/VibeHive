@@ -1,7 +1,7 @@
 Team: 
 Peter-Paul Troendle 
 Michael Pope 
-Jones
+Nicholas Jones
 
 
 Author: Michael Pope
