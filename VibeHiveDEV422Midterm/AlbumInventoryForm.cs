@@ -29,13 +29,11 @@ namespace VibeHiveDEV422Midterm
             _channel = GrpcChannel.ForAddress("https://localhost:7296");
             _client = new AlbumService.AlbumServiceClient(_channel);
 
-            
-            //!do not rm, I didn't want ot manually create the datagridview cols so this will autogenerate them
-            dataGridView_Albums.AutoGenerateColumns = true;
-
+            //setting the default album availability to true
+            chk_Available.Checked = true;
         }
 
-        //bing albums to datagrid view (for form)
+        //bing albums to datagrid view (for form's datagridaview)
         private async Task LoadDataGridWithAlbums()
         {
             try
@@ -53,13 +51,12 @@ namespace VibeHiveDEV422Midterm
                     albums.Add(album);
                 }
                 //vvv old code block just in case
-                //this is not compatible, I'm not sure how to fix without changing to higher version
+                //this is not compatible, I'm not 100% sure how to fix without changing project to higher version of c#
                 //await foreach (var album in callAlbumStream.ResponseStream.ReadAllAsync())
                 //{
                 //    albums.Add(album);
                 //}
 
-                
                 //our data source for datagrid view
                 dataGridView_Albums.DataSource = albums;
             } catch (Grpc.Core.RpcException ex) //catch rpc expection
@@ -82,6 +79,8 @@ namespace VibeHiveDEV422Midterm
                 var yearT = txb_AlbumYear.Text;
 
                 int.TryParse(yearT, out var year);
+                //set available to true by default hwen adding a new album
+                chk_Available.Checked = true;
                 var available = chk_Available.Checked;
 
                 //album detail into list
@@ -100,7 +99,8 @@ namespace VibeHiveDEV422Midterm
                 MessageBox.Show($"Client: Successfully created album with ID of: {addResponse.Album.Id}");
 
                 txb_AlbumId.Text = addResponse.Album.Id;
-
+                //clear album fields after add album success
+                ClearAlbumFields();
                 await LoadDataGridWithAlbums();
             } catch (Grpc.Core.RpcException ex)
             {
@@ -119,7 +119,7 @@ namespace VibeHiveDEV422Midterm
                 //validation for album id
                 if (string.IsNullOrEmpty(txb_AlbumId.Text))
                 {
-                    MessageBox.Show("Must choose an album or input an album's ID");
+                    MessageBox.Show("Must choose an album");
                     return;
                 }
 
@@ -153,6 +153,9 @@ namespace VibeHiveDEV422Midterm
                     $"Genre: {updateResponse.Album.Genre}\n" +
                     $"Year: {updateResponse.Album.Year}\n" +
                     $"Availablle: {updateResponse.Album.Available}");
+                    
+                    //clear album fields after update
+                    ClearAlbumFields();
 
                 //refresh the gridvidw
                 await LoadDataGridWithAlbums();
@@ -189,12 +192,14 @@ namespace VibeHiveDEV422Midterm
                     $"Availablle: {deleteResponse.Album.Available}");
 
                 //wipe out the dtext fields after successful deletion
-                txb_AlbumId.Clear();
-                txb_AlbumTitle.Clear();
-                txb_AlbumArtists.Clear();
-                txb_AlbumGenre.Clear();
-                txb_AlbumYear.Clear();
-                chk_Available.Checked = false;
+                //txb_AlbumId.Clear();
+                //txb_AlbumTitle.Clear();
+                //txb_AlbumArtists.Clear();
+                //txb_AlbumGenre.Clear();
+                //txb_AlbumYear.Clear();
+                //chk_Available.Checked = false;
+                ClearAlbumFields(); //new helper func to concisele clear the txb fields
+
 
                 //refresh the ableum list
                 await LoadDataGridWithAlbums();
@@ -232,6 +237,22 @@ namespace VibeHiveDEV422Midterm
             txb_AlbumGenre.Text = album.Genre;
             txb_AlbumYear.Text = album.Year.ToString();
             chk_Available.Checked = album.Available;
+        }
+
+        //clear all the fields for better UI vis and also accidental data entry avoidance/QOL
+        private void ClearAlbumFields()
+        {
+            txb_AlbumId.Clear();
+            txb_AlbumTitle.Clear();
+            txb_AlbumArtists.Clear();
+            txb_AlbumGenre.Clear();
+            txb_AlbumYear.Clear();
+            chk_Available.Checked = false;
+        }
+
+        private void dataGridView_Albums_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
