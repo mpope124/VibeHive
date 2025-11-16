@@ -1,4 +1,6 @@
-﻿namespace MusicRentalAPI.Data
+﻿using MusicRentalAPI.Models;
+
+namespace MusicRentalAPI.Data
 {
     public class InMemoryDatabase
     {
