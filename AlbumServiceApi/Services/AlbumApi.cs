@@ -73,12 +73,17 @@ namespace AlbumServiceApi.Services
         //delete an album (by id)
         public override Task<DeleteAlbumResponse> DeleteAlbum(AlbumId request, ServerCallContext context)
         {
-            albums.TryRemove(request.Id, out var albumToRemove);
-
-            return Task.FromResult(new DeleteAlbumResponse
+            if (albums.TryRemove(request.Id, out var albumToRemove))
             {
-                Album = albumToRemove
-            });
+                return Task.FromResult(new DeleteAlbumResponse
+                {
+                    Album = albumToRemove
+                });
+            }
+            else
+            {
+                throw new RpcException(new Status(StatusCode.NotFound, $"Album not found by ID: {request.Id}"));
+            }
         }
 
         //list out all the albums
