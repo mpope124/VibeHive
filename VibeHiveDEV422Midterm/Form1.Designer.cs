@@ -1,4 +1,6 @@
-﻿namespace VibeHiveDEV422Midterm
+﻿using System.Windows.Forms;
+
+namespace VibeHiveDEV422Midterm
 {
     partial class Form1
     {

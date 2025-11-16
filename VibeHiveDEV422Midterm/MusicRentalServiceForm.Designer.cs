@@ -45,6 +45,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.listAlbumDataGridView = new System.Windows.Forms.DataGridView();
             this.rentalsDataGridView = new System.Windows.Forms.DataGridView();
+            this.userIdTextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listAlbumDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rentalsDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -76,6 +78,7 @@
             this.addAlbumButton.TabIndex = 2;
             this.addAlbumButton.Text = "Add Album";
             this.addAlbumButton.UseVisualStyleBackColor = true;
+            this.addAlbumButton.Click += new System.EventHandler(this.addAlbumButton_Click);
             // 
             // listAlbumButton
             // 
@@ -85,6 +88,7 @@
             this.listAlbumButton.TabIndex = 3;
             this.listAlbumButton.Text = "List All Albums";
             this.listAlbumButton.UseVisualStyleBackColor = true;
+            this.listAlbumButton.Click += new System.EventHandler(this.listAlbumButton_Click);
             // 
             // rentAlbumButton
             // 
@@ -94,6 +98,7 @@
             this.rentAlbumButton.TabIndex = 4;
             this.rentAlbumButton.Text = "Rent Album";
             this.rentAlbumButton.UseVisualStyleBackColor = true;
+            this.rentAlbumButton.Click += new System.EventHandler(this.rentAlbumButton_Click);
             // 
             // returnAlbumButton
             // 
@@ -103,15 +108,17 @@
             this.returnAlbumButton.TabIndex = 5;
             this.returnAlbumButton.Text = "Return Album";
             this.returnAlbumButton.UseVisualStyleBackColor = true;
+            this.returnAlbumButton.Click += new System.EventHandler(this.returnAlbumButton_Click);
             // 
             // viewActiveRentalsButton
             // 
-            this.viewActiveRentalsButton.Location = new System.Drawing.Point(206, 227);
+            this.viewActiveRentalsButton.Location = new System.Drawing.Point(58, 256);
             this.viewActiveRentalsButton.Name = "viewActiveRentalsButton";
             this.viewActiveRentalsButton.Size = new System.Drawing.Size(142, 23);
             this.viewActiveRentalsButton.TabIndex = 6;
             this.viewActiveRentalsButton.Text = "View Active Rentals";
             this.viewActiveRentalsButton.UseVisualStyleBackColor = true;
+            this.viewActiveRentalsButton.Click += new System.EventHandler(this.viewActiveRentalsButton_Click);
             // 
             // albumTitleTextBox
             // 
@@ -197,11 +204,29 @@
             this.rentalsDataGridView.Size = new System.Drawing.Size(416, 150);
             this.rentalsDataGridView.TabIndex = 16;
             // 
+            // userIdTextBox
+            // 
+            this.userIdTextBox.Location = new System.Drawing.Point(374, 223);
+            this.userIdTextBox.Name = "userIdTextBox";
+            this.userIdTextBox.Size = new System.Drawing.Size(100, 22);
+            this.userIdTextBox.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(316, 226);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 16);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "User ID";
+            // 
             // MusicRentalServiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(644, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.userIdTextBox);
             this.Controls.Add(this.rentalsDataGridView);
             this.Controls.Add(this.listAlbumDataGridView);
             this.Controls.Add(this.label5);
@@ -247,5 +272,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView listAlbumDataGridView;
         private System.Windows.Forms.DataGridView rentalsDataGridView;
+        private System.Windows.Forms.TextBox userIdTextBox;
+        private System.Windows.Forms.Label label6;
     }
 }

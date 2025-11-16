@@ -84,3 +84,5 @@ C:\Users\mpope\OneDrive\Documents\Bellevue College\DEV 422\VibeHive\VibeHive\Vib
 C:\Users\mpope\OneDrive\Documents\Bellevue College\DEV 422\VibeHive\VibeHive\VibeHiveDEV422Midterm\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\mpope\OneDrive\Documents\Bellevue College\DEV 422\VibeHive\VibeHive\VibeHiveDEV422Midterm\obj\Debug\VibeHiveDEV422Midterm.AlbumInventoryForm.resources
 C:\Users\mpope\OneDrive\Documents\Bellevue College\DEV 422\VibeHive\VibeHive\VibeHiveDEV422Midterm\obj\Debug\VibeHive.C0C59085.Up2Date
+C:\Users\mpope\OneDrive\Documents\Bellevue College\DEV 422\VibeHive\VibeHive\VibeHiveDEV422Midterm\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mpope\OneDrive\Documents\Bellevue College\DEV 422\VibeHive\VibeHive\VibeHiveDEV422Midterm\bin\Debug\Newtonsoft.Json.xml
