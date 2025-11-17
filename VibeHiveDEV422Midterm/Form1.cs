@@ -23,5 +23,12 @@ namespace VibeHiveDEV422Midterm
             musicRentalServiceForm.Show();
             this.Hide();
         }
+
+        private void albumInventoryMenuButton_Click(object sender, EventArgs e)
+        {
+            AlbumInventoryForm albumInventoryForm = new AlbumInventoryForm();
+            albumInventoryForm.Show();
+            this.Hide();
+        }
     }
 }

@@ -16,7 +16,6 @@ namespace VibeHiveDEV422Midterm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AlbumInventoryForm());
             Application.Run(new Form1());
         }
     }
