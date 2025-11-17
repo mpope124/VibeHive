@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
@@ -40,6 +41,7 @@ namespace CollaborativePlaylistBuilder.WinForms
         private GroupBox grpVoting;
         private Button btnVote;
         private Button btnRankings;
+        private Button BackButton;
         private DataGridView dgvRankings;
 
         public MainForm()
@@ -81,6 +83,7 @@ namespace CollaborativePlaylistBuilder.WinForms
             btnVote = new Button();
             btnRankings = new Button();
             dgvRankings = new DataGridView();
+            BackButton = new Button();
             grpPlaylist.SuspendLayout();
             grpSongs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvSongs).BeginInit();
@@ -91,6 +94,7 @@ namespace CollaborativePlaylistBuilder.WinForms
             // 
             // grpPlaylist
             // 
+            grpPlaylist.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             grpPlaylist.Controls.Add(lblPlaylistName);
             grpPlaylist.Controls.Add(txtPlaylistName);
             grpPlaylist.Controls.Add(chkCollaborative);
@@ -113,7 +117,7 @@ namespace CollaborativePlaylistBuilder.WinForms
             // 
             // txtPlaylistName
             // 
-            txtPlaylistName.Location = new System.Drawing.Point(70, 22);
+            txtPlaylistName.Location = new System.Drawing.Point(170, 25);
             txtPlaylistName.Name = "txtPlaylistName";
             txtPlaylistName.RightToLeft = RightToLeft.No;
             txtPlaylistName.Size = new System.Drawing.Size(150, 23);
@@ -147,6 +151,7 @@ namespace CollaborativePlaylistBuilder.WinForms
             // 
             // grpSongs
             // 
+            grpSongs.BackColor = System.Drawing.SystemColors.Info;
             grpSongs.Controls.Add(lblSongTitle);
             grpSongs.Controls.Add(txtSongTitle);
             grpSongs.Controls.Add(lblSongArtist);
@@ -155,9 +160,9 @@ namespace CollaborativePlaylistBuilder.WinForms
             grpSongs.Controls.Add(txtSongGenre);
             grpSongs.Controls.Add(btnAddSong);
             grpSongs.Controls.Add(dgvSongs);
-            grpSongs.Location = new System.Drawing.Point(12, 170);
+            grpSongs.Location = new System.Drawing.Point(256, 253);
             grpSongs.Name = "grpSongs";
-            grpSongs.Size = new System.Drawing.Size(500, 250);
+            grpSongs.Size = new System.Drawing.Size(828, 315);
             grpSongs.TabIndex = 1;
             grpSongs.TabStop = false;
             grpSongs.Text = "Songs";
@@ -215,7 +220,7 @@ namespace CollaborativePlaylistBuilder.WinForms
             // 
             // btnAddSong
             // 
-            btnAddSong.Location = new System.Drawing.Point(383, 45);
+            btnAddSong.Location = new System.Drawing.Point(715, 11);
             btnAddSong.Name = "btnAddSong";
             btnAddSong.Size = new System.Drawing.Size(107, 30);
             btnAddSong.TabIndex = 6;
@@ -227,11 +232,12 @@ namespace CollaborativePlaylistBuilder.WinForms
             dgvSongs.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvSongs.Location = new System.Drawing.Point(10, 95);
             dgvSongs.Name = "dgvSongs";
-            dgvSongs.Size = new System.Drawing.Size(480, 140);
+            dgvSongs.Size = new System.Drawing.Size(798, 202);
             dgvSongs.TabIndex = 7;
             // 
             // grpCollaboration
             // 
+            grpCollaboration.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             grpCollaboration.Controls.Add(lblInviteUser);
             grpCollaboration.Controls.Add(txtInviteUser);
             grpCollaboration.Controls.Add(btnInvite);
@@ -252,7 +258,7 @@ namespace CollaborativePlaylistBuilder.WinForms
             // 
             // txtInviteUser
             // 
-            txtInviteUser.Location = new System.Drawing.Point(70, 22);
+            txtInviteUser.Location = new System.Drawing.Point(22, 51);
             txtInviteUser.Name = "txtInviteUser";
             txtInviteUser.RightToLeft = RightToLeft.No;
             txtInviteUser.Size = new System.Drawing.Size(150, 23);
@@ -261,7 +267,7 @@ namespace CollaborativePlaylistBuilder.WinForms
             // 
             // btnInvite
             // 
-            btnInvite.Location = new System.Drawing.Point(10, 55);
+            btnInvite.Location = new System.Drawing.Point(22, 85);
             btnInvite.Name = "btnInvite";
             btnInvite.Size = new System.Drawing.Size(150, 30);
             btnInvite.TabIndex = 2;
@@ -270,12 +276,13 @@ namespace CollaborativePlaylistBuilder.WinForms
             // 
             // grpVoting
             // 
+            grpVoting.BackColor = System.Drawing.SystemColors.HotTrack;
             grpVoting.Controls.Add(btnVote);
             grpVoting.Controls.Add(btnRankings);
             grpVoting.Controls.Add(dgvRankings);
-            grpVoting.Location = new System.Drawing.Point(520, 170);
+            grpVoting.Location = new System.Drawing.Point(1134, 253);
             grpVoting.Name = "grpVoting";
-            grpVoting.Size = new System.Drawing.Size(350, 250);
+            grpVoting.Size = new System.Drawing.Size(350, 315);
             grpVoting.TabIndex = 3;
             grpVoting.TabStop = false;
             grpVoting.Text = "Voting";
@@ -303,12 +310,25 @@ namespace CollaborativePlaylistBuilder.WinForms
             dgvRankings.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvRankings.Location = new System.Drawing.Point(10, 65);
             dgvRankings.Name = "dgvRankings";
-            dgvRankings.Size = new System.Drawing.Size(330, 170);
+            dgvRankings.Size = new System.Drawing.Size(330, 232);
             dgvRankings.TabIndex = 2;
+            // 
+            // BackButton
+            // 
+            BackButton.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            BackButton.Location = new System.Drawing.Point(1334, 27);
+            BackButton.Name = "BackButton";
+            BackButton.Size = new System.Drawing.Size(150, 30);
+            BackButton.TabIndex = 3;
+            BackButton.Text = "Exit - Back to Main Page";
+            BackButton.UseVisualStyleBackColor = false;
+            BackButton.Click += BackButton_Click;
             // 
             // MainForm
             // 
-            ClientSize = new System.Drawing.Size(900, 450);
+            BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            ClientSize = new System.Drawing.Size(1544, 580);
+            Controls.Add(BackButton);
             Controls.Add(grpPlaylist);
             Controls.Add(grpSongs);
             Controls.Add(grpCollaboration);
@@ -500,6 +520,24 @@ namespace CollaborativePlaylistBuilder.WinForms
 
         private void txtPlaylistName_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+
+            // Path to VibeHive executable (adjust if needed)
+            string exePath = @"..\..\..\VibeHiveDEV422Midterm\bin\Debug\VibeHiveDEV422Midterm.exe";
+
+            try
+            {
+                Process.Start(exePath);
+                this.Close(); // Close Playlist Builder
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to open VibeHive: {ex.Message}");
+            }
 
         }
     }

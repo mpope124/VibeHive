@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "VibeHiveDEV422Midterm\\VibeHiveDEV422Midterm.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "CollaborativePlaylistBuilder\\CollaborativePlaylistBuilder.API\\CollaborativePlaylistBuilder.API.csproj",
+        "Action": "StartWithoutDebugging"
+      }
+    ]
+  }
+]
