@@ -1,0 +1,1 @@
+namespace CollaborativePlaylistBuilder.API.DTOs { public class AddSongDto { public string Title { get; set; } public string Artist { get; set; } public string Genre { get; set; } public int DurationSeconds { get; set; } } }

@@ -1,0 +1,166 @@
+{
+    "info": {
+        "name": "Collaborative Playlist Builder API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Create Playlist",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"Name\": \"My Playlist\", \"CreatedBy\": 1, \"IsCollaborative\": true}"
+                },
+                "url": {
+                    "raw": "https://localhost:40341/api/playlists",
+                    "protocol": "https",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "40341",
+                    "path": [
+                        "api",
+                        "playlists"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Playlists",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://localhost:40341/api/playlists",
+                    "protocol": "https",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "40341",
+                    "path": [
+                        "api",
+                        "playlists"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Add Song",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"Title\": \"Song A\", \"Artist\": \"Artist A\", \"Genre\": \"Pop\", \"DurationSeconds\": 180}"
+                },
+                "url": {
+                    "raw": "https://localhost:40341/api/playlists/1/add",
+                    "protocol": "https",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "40341",
+                    "path": [
+                        "api",
+                        "playlists",
+                        "1",
+                        "add"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Invite Collaborator",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"UserId\": 2}"
+                },
+                "url": {
+                    "raw": "https://localhost:40341/api/playlists/1/invite",
+                    "protocol": "https",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "40341",
+                    "path": [
+                        "api",
+                        "playlists",
+                        "1",
+                        "invite"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Vote Song",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"SongId\": 1, \"Upvote\": true}"
+                },
+                "url": {
+                    "raw": "https://localhost:40341/api/playlists/1/vote",
+                    "protocol": "https",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "40341",
+                    "path": [
+                        "api",
+                        "playlists",
+                        "1",
+                        "vote"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Rankings",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://localhost:40341/api/playlists/1/rankings",
+                    "protocol": "https",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "40341",
+                    "path": [
+                        "api",
+                        "playlists",
+                        "1",
+                        "rankings"
+                    ]
+                }
+            }
+        }
+    ]
+}

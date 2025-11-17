@@ -1,0 +1,235 @@
+C:\Node\GitPort\dev422_fall_midterm\VibeHive\CollaborativePlaylistBuilder_Solution (main -> origin)
+λ tree /f
+Folder PATH listing for volume Windows
+Volume serial number is 50AD-3625
+C:.
+│   CNodeGitPortdev422_fall_midtermVibe.txt
+│   CollaborativePlaylistBuilder.sln
+│   CollaborativePlaylistBuilder_PostmanCollection.json
+│   GlobalTypes.cs
+│   IntegrationDiagram.png
+│   README.txt
+│
+├───CollaborativePlaylistBuilder.API
+│   │   CollaborativePlaylistBuilder.API.csproj
+│   │   Program.cs
+│   │   Startup.cs
+│   │
+│   ├───bin
+│   │   └───Debug
+│   │       ├───net6.0
+│   │       │       CollaborativePlaylistBuilder.API.deps.json
+│   │       │       CollaborativePlaylistBuilder.API.dll
+│   │       │       CollaborativePlaylistBuilder.API.exe
+│   │       │       CollaborativePlaylistBuilder.API.pdb
+│   │       │       CollaborativePlaylistBuilder.API.runtimeconfig.json
+│   │       │       CollaborativePlaylistBuilder.API.staticwebassets.endpoints.json
+│   │       │       Microsoft.AspNetCore.Connections.Abstractions.dll
+│   │       │       Microsoft.AspNetCore.Http.Connections.Client.dll
+│   │       │       Microsoft.AspNetCore.Http.Connections.Common.dll
+│   │       │       Microsoft.AspNetCore.SignalR.Client.Core.dll
+│   │       │       Microsoft.AspNetCore.SignalR.Client.dll
+│   │       │       Microsoft.AspNetCore.SignalR.Common.dll
+│   │       │       Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+│   │       │       Microsoft.Bcl.AsyncInterfaces.dll
+│   │       │       Microsoft.Bcl.TimeProvider.dll
+│   │       │       Microsoft.Extensions.DependencyInjection.Abstractions.dll
+│   │       │       Microsoft.Extensions.DependencyInjection.dll
+│   │       │       Microsoft.Extensions.Features.dll
+│   │       │       Microsoft.Extensions.Logging.Abstractions.dll
+│   │       │       Microsoft.Extensions.Logging.dll
+│   │       │       Microsoft.Extensions.Options.dll
+│   │       │       Microsoft.Extensions.Primitives.dll
+│   │       │       Newtonsoft.Json.dll
+│   │       │       System.Diagnostics.DiagnosticSource.dll
+│   │       │       System.IO.Pipelines.dll
+│   │       │       System.Net.ServerSentEvents.dll
+│   │       │       System.Runtime.CompilerServices.Unsafe.dll
+│   │       │       System.Text.Encodings.Web.dll
+│   │       │       System.Text.Json.dll
+│   │       │       System.Threading.Channels.dll
+│   │       │
+│   │       └───net8.0
+│   │           └───runtimes
+│   │               └───browser
+│   │                   └───lib
+│   │                       └───net8.0
+│   ├───Commands
+│   │       CommandPattern.cs
+│   │
+│   ├───Controllers
+│   │       PlaylistsController.cs
+│   │
+│   ├───DTOs
+│   │       AddSongDto.cs
+│   │       CreatePlaylistDto.cs
+│   │       VoteDto.cs
+│   │
+│   ├───Hubs
+│   │       PlaylistHub.cs
+│   │
+│   ├───Models
+│   │       Models.cs
+│   │       Playlist.cs
+│   │       Song.cs
+│   │       User.cs
+│   │
+│   ├───obj
+│   │   │   CollaborativePlaylistBuilder.API.csproj.nuget.dgspec.json
+│   │   │   CollaborativePlaylistBuilder.API.csproj.nuget.g.props
+│   │   │   CollaborativePlaylistBuilder.API.csproj.nuget.g.targets
+│   │   │   project.assets.json
+│   │   │   project.nuget.cache
+│   │   │
+│   │   └───Debug
+│   │       ├───net6.0
+│   │       │   │   .NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+│   │       │   │   apphost.exe
+│   │       │   │   Collabor.4AB95B3C.Up2Date
+│   │       │   │   CollaborativePlaylistBuilder.API.AssemblyInfo.cs
+│   │       │   │   CollaborativePlaylistBuilder.API.AssemblyInfoInputs.cache
+│   │       │   │   CollaborativePlaylistBuilder.API.assets.cache
+│   │       │   │   CollaborativePlaylistBuilder.API.csproj.AssemblyReference.cache
+│   │       │   │   CollaborativePlaylistBuilder.API.csproj.CoreCompileInputs.cache
+│   │       │   │   CollaborativePlaylistBuilder.API.csproj.FileListAbsolute.txt
+│   │       │   │   CollaborativePlaylistBuilder.API.dll
+│   │       │   │   CollaborativePlaylistBuilder.API.GeneratedMSBuildEditorConfig.editorconfig
+│   │       │   │   CollaborativePlaylistBuilder.API.genruntimeconfig.cache
+│   │       │   │   CollaborativePlaylistBuilder.API.MvcApplicationPartsAssemblyInfo.cache
+│   │       │   │   CollaborativePlaylistBuilder.API.pdb
+│   │       │   │   CollaborativePlaylistBuilder.API.sourcelink.json
+│   │       │   │   rjsmcshtml.dswa.cache.json
+│   │       │   │   rjsmrazor.dswa.cache.json
+│   │       │   │   staticwebassets.build.endpoints.json
+│   │       │   │   staticwebassets.build.json
+│   │       │   │   staticwebassets.build.json.cache
+│   │       │   │   staticwebassets.references.upToDateCheck.txt
+│   │       │   │   staticwebassets.removed.txt
+│   │       │   │
+│   │       │   ├───ref
+│   │       │   │       CollaborativePlaylistBuilder.API.dll
+│   │       │   │
+│   │       │   ├───refint
+│   │       │   │       CollaborativePlaylistBuilder.API.dll
+│   │       │   │
+│   │       │   └───staticwebassets
+│   │       └───net8.0
+│   │           │   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+│   │           │   ApiEndpoints.json
+│   │           │   apphost.exe
+│   │           │   CollaborativePlaylistBuilder.API.assets.cache
+│   │           │   CollaborativePlaylistBuilder.API.csproj.FileListAbsolute.txt
+│   │           │   staticwebassets.references.upToDateCheck.txt
+│   │           │   staticwebassets.removed.txt
+│   │           │
+│   │           ├───ref
+│   │           ├───refint
+│   │           └───staticwebassets
+│   ├───Properties
+│   │       launchSettings.json
+│   │
+│   └───Services
+│           PlaylistService.cs
+│
+├───CollaborativePlaylistBuilder.WinForms
+│   │   CollaborativePlaylistBuilder.WinForms.csproj
+│   │   CollaborativePlaylistBuilder.WinForms.csproj.user
+│   │   Program.cs
+│   │
+│   ├───bin
+│   │   └───Debug
+│   │       ├───net6.0-windows
+│   │       │       CollaborativePlaylistBuilder.WinForms.deps.json
+│   │       │       CollaborativePlaylistBuilder.WinForms.dll
+│   │       │       CollaborativePlaylistBuilder.WinForms.exe
+│   │       │       CollaborativePlaylistBuilder.WinForms.pdb
+│   │       │       CollaborativePlaylistBuilder.WinForms.runtimeconfig.json
+│   │       │       Newtonsoft.Json.dll
+│   │       │
+│   │       └───net8.0-windows
+│   ├───Forms
+│   │       AddSongForm.cs
+│   │       CreatePlaylistForm.cs
+│   │       InviteCollaboratorsForm.cs
+│   │       MainForm.cs
+│   │       MainForm.Designer.cs
+│   │       RankingsForm.cs
+│   │
+│   └───obj
+│       │   CollaborativePlaylistBuilder.WinForms.csproj.nuget.dgspec.json
+│       │   CollaborativePlaylistBuilder.WinForms.csproj.nuget.g.props
+│       │   CollaborativePlaylistBuilder.WinForms.csproj.nuget.g.targets
+│       │   project.assets.json
+│       │   project.nuget.cache
+│       │
+│       └───Debug
+│           ├───net6.0-windows
+│           │   │   .NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+│           │   │   apphost.exe
+│           │   │   Collabor.656706C1.Up2Date
+│           │   │   CollaborativePlaylistBuilder.WinForms.AssemblyInfo.cs
+│           │   │   CollaborativePlaylistBuilder.WinForms.AssemblyInfoInputs.cache
+│           │   │   CollaborativePlaylistBuilder.WinForms.assets.cache
+│           │   │   CollaborativePlaylistBuilder.WinForms.csproj.AssemblyReference.cache
+│           │   │   CollaborativePlaylistBuilder.WinForms.csproj.CoreCompileInputs.cache
+│           │   │   CollaborativePlaylistBuilder.WinForms.csproj.FileListAbsolute.txt
+│           │   │   CollaborativePlaylistBuilder.WinForms.dll
+│           │   │   CollaborativePlaylistBuilder.WinForms.GeneratedMSBuildEditorConfig.editorconfig
+│           │   │   CollaborativePlaylistBuilder.WinForms.genruntimeconfig.cache
+│           │   │   CollaborativePlaylistBuilder.WinForms.pdb
+│           │   │   CollaborativePlaylistBuilder.WinForms.sourcelink.json
+│           │   │
+│           │   ├───ref
+│           │   │       CollaborativePlaylistBuilder.WinForms.dll
+│           │   │
+│           │   └───refint
+│           │           CollaborativePlaylistBuilder.WinForms.dll
+│           │
+│           └───net8.0-windows
+│               │   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+│               │   apphost.exe
+│               │   CollaborativePlaylistBuilder.WinForms.AssemblyInfo.cs
+│               │   CollaborativePlaylistBuilder.WinForms.AssemblyInfoInputs.cache
+│               │   CollaborativePlaylistBuilder.WinForms.assets.cache
+│               │   CollaborativePlaylistBuilder.WinForms.csproj.AssemblyReference.cache
+│               │   CollaborativePlaylistBuilder.WinForms.csproj.CoreCompileInputs.cache
+│               │   CollaborativePlaylistBuilder.WinForms.csproj.FileListAbsolute.txt
+│               │   CollaborativePlaylistBuilder.WinForms.GeneratedMSBuildEditorConfig.editorconfig
+│               │   CollaborativePlaylistBuilder.WinForms.sourcelink.json
+│               │
+│               ├───ref
+│               └───refint
+└───Shared
+    │   Class1.cs
+    │   Shared.csproj
+    │
+    ├───bin
+    │   └───Debug
+    │       └───net8.0
+    ├───Interfaces
+    │       ICommand.cs
+    │       IPlaylistRepository.cs
+    │
+    ├───obj
+    │   │   project.assets.json
+    │   │   project.nuget.cache
+    │   │   Shared.csproj.nuget.dgspec.json
+    │   │   Shared.csproj.nuget.g.props
+    │   │   Shared.csproj.nuget.g.targets
+    │   │
+    │   └───Debug
+    │       └───net8.0
+    │           │   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+    │           │   Shared.AssemblyInfo.cs
+    │           │   Shared.AssemblyInfoInputs.cache
+    │           │   Shared.assets.cache
+    │           │   Shared.GeneratedMSBuildEditorConfig.editorconfig
+    │           │   Shared.GlobalUsings.g.cs
+    │           │
+    │           ├───ref
+    │           └───refint
+    └───Repositories
+            PlaylistRepository.cs
+
+
+C:\Node\GitPort\dev422_fall_midterm\VibeHive\CollaborativePlaylistBuilder_Solution (main -> origin)
