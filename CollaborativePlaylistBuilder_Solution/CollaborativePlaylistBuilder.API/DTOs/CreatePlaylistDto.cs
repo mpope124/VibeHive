@@ -1,0 +1,1 @@
+namespace CollaborativePlaylistBuilder.API.DTOs { public class CreatePlaylistDto { public string Name { get; set; } public int CreatedBy { get; set; } public bool IsCollaborative { get; set; } } }
