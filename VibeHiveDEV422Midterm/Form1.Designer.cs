@@ -33,7 +33,7 @@ namespace VibeHiveDEV422Midterm
             this.musicRentalServiceButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.albumInventoryMenuButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.playlistBuilderMenuButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // musicRentalServiceButton
@@ -66,21 +66,21 @@ namespace VibeHiveDEV422Midterm
             this.albumInventoryMenuButton.UseVisualStyleBackColor = true;
             this.albumInventoryMenuButton.Click += new System.EventHandler(this.albumInventoryMenuButton_Click);
             // 
-            // button2
+            // playlistBuilderMenuButton
             // 
-            this.button2.Location = new System.Drawing.Point(82, 225);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.playlistBuilderMenuButton.Location = new System.Drawing.Point(82, 225);
+            this.playlistBuilderMenuButton.Name = "playlistBuilderMenuButton";
+            this.playlistBuilderMenuButton.Size = new System.Drawing.Size(206, 23);
+            this.playlistBuilderMenuButton.TabIndex = 3;
+            this.playlistBuilderMenuButton.Text = "Playlist Builder Menu";
+            this.playlistBuilderMenuButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(677, 450);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.playlistBuilderMenuButton);
             this.Controls.Add(this.albumInventoryMenuButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.musicRentalServiceButton);
@@ -96,7 +96,7 @@ namespace VibeHiveDEV422Midterm
         private System.Windows.Forms.Button musicRentalServiceButton;
         private Label label1;
         private Button albumInventoryMenuButton;
-        private Button button2;
+        private Button playlistBuilderMenuButton;
     }
 }
 
